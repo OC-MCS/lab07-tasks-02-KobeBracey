@@ -14,4 +14,5 @@ public:
 	void roll();     // Rolls the die
 	int getSides();  // Returns the number of sides
 	int getValue();  // Returns the die's value
+	void displayPct(int[], int); // Calculates dice percents and displays them
 };

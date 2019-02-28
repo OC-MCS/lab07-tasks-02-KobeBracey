@@ -1,6 +1,8 @@
 // Implememtation file for the Die class
 #include <cstdlib>     // For rand and srand
 #include <ctime>       // For the time function
+#include <iostream>
+#include <iomanip>
 #include "Die.h"
 using namespace std;
 
@@ -53,3 +55,20 @@ int Die::getValue()
 	return value;
 }
 
+void Die::displayPct(int die[], int size)
+{
+	double diePct[13];
+
+	for (int i = 1; i <= size; i++)
+	{
+		diePct[i] = (static_cast<double>(die[i]) / 1000000) * 100;
+	}
+
+	cout << "Stats for " << size << " sided dice:" << endl;
+	for (int i = 1; i <= size; i++)
+	{
+		cout << "Dice " << setw(2) << i << ": " << setprecision(2) << fixed << diePct[i] << "%" << endl;
+	}
+	cout << endl;
+
+}
