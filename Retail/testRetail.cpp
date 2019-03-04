@@ -13,7 +13,7 @@ int main()
 
 	for (int i = 0; i < RetailV.size(); i++)
 	{
-		cout << RetailV[i].getDescription();
+		cout << RetailV[i].getDescription() << RetailV[i].getUnits() << RetailV[i].getPrice() << RetailV[i].getStockValue();
 	}
 
 	return 0;
